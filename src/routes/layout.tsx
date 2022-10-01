@@ -3,7 +3,7 @@ import Header from '../components/header/header';
 
 export default component$(() => {
   return (
-    <>
+    <div class="bg-[#020015] min-h-screen">
       <main>
         <Header />
         <section>
@@ -13,6 +13,6 @@ export default component$(() => {
       <footer>
        
       </footer>
-    </>
+    </div>
   );
 });

@@ -22,10 +22,14 @@ export const RouterHead = component$(() => {
         href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap"
         rel="stylesheet"
       />
+      <link 
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
 
-      <meta property="og:site_name" content="Qwik" />
-      <meta name="twitter:site" content="@QwikDev" />
-      <meta name="twitter:title" content="Qwik" />
+      <meta property="og:site_name" content="SSN Invente" />
+      <meta name="twitter:site" content="SSN Invente" />
+      <meta name="twitter:title" content="SSN Invente" />
 
       {head.meta.map((m) => (
         <meta {...m} />
