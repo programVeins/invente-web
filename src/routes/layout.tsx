@@ -3,16 +3,14 @@ import Header from '../components/header/header';
 
 export default component$(() => {
   return (
-    <div class="bg-[#020015] min-h-screen">
+    <div class="bg-background min-h-screen">
       <main>
         <Header />
         <section>
           <Slot />
         </section>
       </main>
-      <footer>
-       
-      </footer>
+      <footer></footer>
     </div>
   );
 });
