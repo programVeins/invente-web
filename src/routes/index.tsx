@@ -1,8 +1,30 @@
 import { component$ } from '@builder.io/qwik';
 import { DocumentHead, Link } from '@builder.io/qwik-city';
+import AboutInvente from '~/components/about-invente';
+import Heading from '~/components/heading';
 
 export default component$(() => {
   const depts = [
+    {
+      name: 'CSE',
+      img: '/images/cse.png',
+      link: '/events/cse',
+    },
+    {
+      name: 'IT',
+      img: '/images/it.png',
+      link: '/events/it',
+    },
+    {
+      name: 'ECE',
+      img: '/images/ece.png',
+      link: '/events/ece',
+    },
+    {
+      name: 'EEE',
+      img: '/images/eee.png',
+      link: '/events/eee',
+    },
     {
       name: 'CSE',
       img: '/images/cse.png',
@@ -33,10 +55,9 @@ export default component$(() => {
       </div>
 
       <div class="w-3/4 mx-auto">
-        <h2 class="font-space text-teal-500 text-3xl">Events</h2>
-        <hr class="w-40 border-t-2 mt-4 border-teal-500" />
+        <Heading title="events" />
 
-        <div class="grid grid-cols-4 gap-10 place-items-center mt-10">
+        <div class="grid grid-cols-4 gap-10 place-items-center my-10">
           {depts.map((dept, i) => (
             <Link href={dept.link}>
               <div
@@ -51,6 +72,7 @@ export default component$(() => {
             </Link>
           ))}
         </div>
+        <AboutInvente />
       </div>
     </div>
   );
