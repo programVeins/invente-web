@@ -1,5 +1,4 @@
 import { component$, useClientEffect$, useStore } from "@builder.io/qwik";
-import moment from "moment";
 
 export default component$(() => {
   const inventeDate = new Date();

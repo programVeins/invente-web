@@ -56,15 +56,15 @@ export default component$(() => {
       </div>
       <Countdown />
 
-      {/* <div class="w-3/4 mx-auto">
+      <div class="w-3/4 mx-auto">
         <AboutInvente />
-      </div> */}
+      </div>
       <div class="">
         <BlurryJumbotron text={"hi"} />
       </div>
-      {/* <div class="w-3/4 mx-auto">
+      <div class="w-3/4 mx-auto">
         <EventGrid depts={depts} />
-      </div> */}
+      </div>
     </div>
   );
 });

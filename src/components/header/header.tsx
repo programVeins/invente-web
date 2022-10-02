@@ -1,6 +1,5 @@
-import { component$, $ } from '@builder.io/qwik';
-import { Link } from '@builder.io/qwik-city';
-import { login } from '~/services/auth0';
+import { component$ } from "@builder.io/qwik";
+import { Link } from "@builder.io/qwik-city";
 
 export default component$(() => {
   return (
@@ -19,7 +18,7 @@ export default component$(() => {
       <div class="flex gap-10 w-1/4 justify-end">
         <img class="" src="/images/invente.png" />
         <button
-          onClick$={$(login)}
+          onClick$={() => {}}
           class="bg-teal-500 hover:bg-teal-300 duration-200  rounded-md text-black py-2 px-10 font-space font-bold"
         >
           Register
