@@ -3,10 +3,11 @@ import {
   Slot,
   useContextProvider,
   useStore,
-} from '@builder.io/qwik';
-import BlurryCircle from '~/components/blurry-circle';
-import { AppContext } from '~/context';
-import Header from '../components/header/header';
+} from "@builder.io/qwik";
+import BlurryCircle from "~/components/blurry-circle";
+import GridBg from "~/components/grid-bg";
+import { AppContext } from "~/context";
+import Header from "../components/header/header";
 
 export default component$(() => {
   useContextProvider(AppContext, useStore({}));
@@ -14,8 +15,9 @@ export default component$(() => {
   return (
     <div class="bg-background min-h-screen">
       <main>
-        <BlurryCircle />
         <Header />
+        <GridBg />
+        <BlurryCircle />
         <section>
           <Slot />
         </section>
