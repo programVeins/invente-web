@@ -2,6 +2,7 @@ import { component$ } from "@builder.io/qwik";
 import { DocumentHead, Link } from "@builder.io/qwik-city";
 import AboutInvente from "~/components/about-invente";
 import BlurryJumbotron from "~/components/blurry-jumbotron";
+import Countdown from "~/components/countdown";
 import EventGrid from "~/components/event-grid";
 import Heading from "~/components/heading";
 
@@ -50,13 +51,14 @@ export default component$(() => {
   ];
   return (
     <div class="">
-      <div class="flex justify-center items-center gap-10 py-40">
+      <div class="flex justify-center items-center gap-10 my-40">
         <h1 class="text-7xl text-center text-white font-azonix">Invente 6.0</h1>
       </div>
+      <Countdown />
 
-      <div class="w-3/4 mx-auto">
+      {/* <div class="w-3/4 mx-auto">
         <AboutInvente />
-      </div>
+      </div> */}
       <div class="">
         <BlurryJumbotron text={"hi"} />
       </div>

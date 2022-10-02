@@ -41,6 +41,7 @@
     "vite-tsconfig-paths": "3.5.0"
   },
   "dependencies": {
-    "@auth0/auth0-spa-js": "^1.22.4"
+    "@auth0/auth0-spa-js": "^1.22.4",
+    "moment": "^2.29.4"
   }
 }

@@ -2,26 +2,29 @@ import { component$, useClientEffect$, useStore } from "@builder.io/qwik";
 
 export default component$(() => {
   const store = useStore({
-    color: 4,
-    isGoingUp: true,
+    colors: [
+      "bg-sky-500",
+      "bg-teal-500",
+      "bg-green-500",
+      "bg-amber-500",
+      "bg-rose-500",
+      "bg-pink-500",
+      "bg-fuchsia-500",
+      "bg-violet-500",
+      "bg-indigo-500",
+      "bg-blue-500",
+    ],
+    activeColor: 0,
   });
 
   useClientEffect$(() => {
     const timer = setInterval(() => {
-      if (store.color > 8) {
-        store.isGoingUp = false;
-      }
-
-      if (store.color < 2) {
-        store.isGoingUp = true;
-      }
-
-      if (store.isGoingUp) {
-        store.color++;
+      if (store.activeColor === store.colors.length - 1) {
+        store.activeColor = 0;
       } else {
-        store.color--;
+        store.activeColor++;
       }
-    }, 100);
+    }, 1500);
     return () => {
       clearInterval(timer);
     };
@@ -29,7 +32,9 @@ export default component$(() => {
   return (
     <div class="w-screen flex justify-center">
       <div
-        class={`rounded-full h-[400px] w-[400px] transition-colors duration-300 bg-sky-${store.color}00 blur-[500px] absolute -bottom-80`}
+        class={`rounded-full h-[400px] w-[400px] transition-colors duration-1000 ${
+          store.colors[store.activeColor]
+        }  blur-[500px] absolute -bottom-80`}
       ></div>
     </div>
   );
